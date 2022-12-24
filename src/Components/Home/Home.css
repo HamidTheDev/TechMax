@@ -1,0 +1,88 @@
+.gradient {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    background:#7a64ffff;
+}
+
+.gradient::before {
+    content: '';
+    position: absolute;
+    height: 60vh;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgb(108, 85, 237);
+    clip-path: polygon(100%  70%,   0   100%,100%   100%);
+}
+
+.header-img{
+    max-width: 40vw;
+    margin-left: 10%;
+    margin-top: -5%;
+}
+
+button{
+    letter-spacing: 1px;
+}
+
+section{
+    background-color: rgb(245, 246, 247);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 70vh;
+    width: 70%;
+    background: rgb(108, 85, 237);
+    z-index: 2;
+    clip-path: circle(20% at 90% 95%)
+}
+
+
+
+
+.anim{
+    animation: wiggle 4s linear 0s infinite alternate;
+}
+
+@keyframes wiggle {
+    from{
+     transform: rotate(0deg);
+    }
+    to{
+     transform: rotate(+10deg);
+    }
+}
+
+
+@media only screen and (max-width:680px) {
+    .header-img{
+   display: none;
+    }
+    .anim-text{
+        margin-top: 30px;
+        text-align: center;
+        text-decoration: underline;
+
+    }
+    .header-text{
+        min-width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0px;
+    }
+    .header-section{
+        margin-top: -50px;
+        padding-bottom: 0px;
+        
+    }
+        .gradient{
+            max-height: 50vh;
+
+        }
+}
